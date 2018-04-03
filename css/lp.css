@@ -1,0 +1,1561 @@
+@charset "UTF-8";
+/* -----------------------------------------
+ Reset
+------------------------------------------- */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+em {
+  font-style: normal;
+}
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: .8rem 0;
+  padding: 0;
+}
+input, select {
+  vertical-align: middle;
+}
+/* -----------------------------------------
+ 基本
+------------------------------------------- */
+html {
+  font-size: 62.5%;
+}
+body {
+  color: #333;
+  background: #fff;
+  font-size: 1.6rem;
+  font-family: Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+/* -----------------------------------------
+ 文字装飾
+------------------------------------------- */
+.bold {
+  font-weight: bold;
+}
+.normal {
+  font-weight: normal;
+}
+.red {
+  color: #E02E17;
+}
+.blue {
+  color: #008CD7;
+}
+.yellow {
+  color: #FDE24E;
+}
+.orange {
+  color: #EB5505;
+}
+p {
+  line-height: 1.5;
+}
+.txt-center {
+  text-align: center;
+}
+.txt-right {
+  text-align: right;
+}
+.txt-left {
+  text-align: left;
+}
+.f32 {
+  font-size: 3.2rem;
+}
+.f28 {
+  font-size: 2.8rem;
+}
+.f26 {
+  font-size: 2.6rem;
+}
+.f24 {
+  font-size: 2.4rem;
+}
+.f21 {
+  font-size: 2.1rem;
+}
+.f19 {
+  font-size: 1.9rem;
+}
+.f18 {
+  font-size: 1.8rem;
+}
+.f17 {
+  font-size: 1.7rem;
+}
+.f16 {
+  font-size: 1.6rem;
+}
+.f15 {
+  font-size: 1.5rem;
+}
+.f14 {
+  font-size: 1.4rem;
+}
+.f13 {
+  font-size: 1.3rem;
+}
+.f12 {
+  font-size: 1.2rem;
+}
+.f11 {
+  font-size: 1.1rem;
+}
+.f10 {
+  font-size: 1rem;
+}
+.mb0 {
+  margin-bottom: 0;
+}
+.mb10 {
+  margin-bottom: 1rem;
+}
+.mb15 {
+  margin-bottom: 1.5rem;
+}
+.mb20 {
+  margin-bottom: 2rem;
+}
+.mb25 {
+  margin-bottom: 2.5rem;
+}
+.mb30 {
+  margin-bottom: 3rem;
+}
+.mb40 {
+  margin-bottom: 4rem;
+}
+.mb5e {
+  margin-bottom: .5em;
+}
+.lh22 {
+  line-height: 2.2;
+}
+/* -----------------------------------------
+ リンク
+------------------------------------------- */
+a:link {
+  color: #008CD7;
+  text-decoration: underline;
+}
+a:hover {
+  opacity: .8;
+}
+a:visited {
+  color: #35318F;
+  text-decoration: underline;
+}
+a:active {
+  color: #e00;
+  text-decoration: none;
+}
+a.arrow {
+  display: inline-block;
+  position: relative;
+  padding-left: 1.4em;
+  text-decoration: none;
+}
+a.arrow::before {
+  content: '';
+  width: .5em;
+  height: .5em;
+  border: 0px;
+  border-top: solid .1rem #007CD1;
+  border-right: solid .1rem #007CD1;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: .2em;
+}
+a.arrow:visited::before {
+  border-top: solid .1rem #35318F;
+  border-right: solid .1rem #35318F;
+}
+.arrow-box {
+  padding: .8rem 0;
+}
+
+/* -----------------------------------------
+ Clear Fix
+------------------------------------------- */
+.cf:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* -----------------------------------------
+ レイアウト
+------------------------------------------- */
+.wrap {
+  width: 96rem;
+  margin: 0 auto;
+}
+.wrap-in {
+  width: 88rem;
+  margin: 0 auto;
+}
+section {
+  position: relative;
+  padding-bottom: 6rem;
+}
+.ttl {
+  margin-bottom: 3.6rem;
+  padding: 5.2rem 0;
+  font-weight: bold;
+  font-size: 3.6rem;
+  text-align: center;
+  background-color: #D0F4F4;
+}
+.ttl [class^="icon-"], .ttl[class*=" icon-"] {
+  position: relative;
+  display: inline-block;
+  padding-left: 12.2rem;
+}
+.ttl [class^="icon-"]::before, .ttl[class*=" icon-"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.ttl [class^="icon-"]::after, .ttl[class*=" icon-"]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 10rem;
+  height: 10rem;
+  background: url(../img/icon_heading.png) 0 0 no-repeat;
+  -webkit-background-size: 10rem auto;
+  background-size: 10rem auto;
+}
+.ttl .icon-plan::after {
+  background-position: 0 0;
+}
+.ttl .icon-sim::after {
+  background-position: 0 -10rem;
+}
+.ttl .icon-flow::after {
+  background-position: 0 -20rem;
+}
+.ttl .icon-faq::after {
+  background-position: 0 -30rem;
+}
+.ttl .fs-s {
+  font-size: 2.8rem;
+}
+.bg-yellow {
+  
+}
+/*.pc-only {
+  display: none;
+}*/
+.sp-only {
+  display: none;
+}
+ul.disc li {
+  display: block;
+  margin-bottom: .5rem;
+  padding-left: 1.6rem;
+  position: relative;
+  line-height: 1.4;
+  font-size: 1.4rem;
+}
+ul.disc li:last-child {
+  margin-bottom: 0;
+}
+ul.disc li:before {
+  content: '';
+  width: .6rem;
+  height: .6rem;
+  background: #999;
+  border-radius: 50%;
+  position: absolute;
+  left: .2em;
+  top: .4em;
+}
+.notes li {
+  line-height: 1.4;
+  font-size: 1.2rem;
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+.notes-ttl {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.top-notes {
+  text-align: right;
+  font-size: 1.4rem;
+}
+.copy {
+  margin-bottom: 3.6rem;
+  text-align: center;
+}
+/* -----------------------------------------
+ ボタン
+------------------------------------------- */
+/* 赤 */
+a.btn-red {
+  display: inline-block;
+  min-width: 35rem;
+  background-color: #D61D1D;
+  color: #fff;
+  text-decoration: none;
+  border-radius: .6rem;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  -webkit-box-shadow: 0 .3rem #A51300;
+  box-shadow: 0 .3rem #A51300;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+}
+a.btn-red span {
+  display: block;
+  position: relative;
+  padding: .6em 1.6em .6em 1em;
+}
+a.btn-red span::after {
+  content: '';
+  width: .6em;
+  height: .6em;
+  border: 0px;
+  border-top: solid .2rem #fff;
+  border-right: solid .2rem #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1.5rem;
+  margin: auto;
+}
+/* anime */
+a.btn-red::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #de4a4a;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+a.btn-red::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #D61D1D;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+a.btn-red.anime::before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+a.btn-red.anime::after {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+
+/* -----------------------------------------
+ 申し込み
+------------------------------------------- */
+.apply {
+  margin-top: 3.6rem;
+}
+.apply-box {
+  padding: 3rem 0 2.6rem;
+  border: .1rem solid #ccc;
+  border-radius: 1rem;
+}
+.apply-box::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.apply-box > div {
+  float: left;
+  width: 50%;
+  min-height: 10rem;
+  box-sizing: border-box;
+}
+.apply-box > div:first-child {
+  border-right: .1rem solid #ccc;
+}
+.apply a.btn-red {
+  min-width: 30rem;
+}
+.apply h3 {
+  margin-bottom: 1.6rem;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: .1rem;
+}
+.apply .tel-apply p {
+  line-height: 1;
+}
+.apply .tel-balloon {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #E02E17;
+  padding: .4rem .4rem .3em;
+  line-height: 1.2;
+  border: .1rem solid #E02E17;
+  border-radius: .4rem;
+  margin-right: .7rem;
+  position: relative;
+  top: -.1em;
+}
+.apply .tel-number {
+  position: relative;
+  top: -.2em;
+  margin-bottom: .8rem;
+  text-align: center;
+}
+.apply .tel-number a {
+  color: #E02E17;
+  font-size: 4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.apply .tel-time {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+}
+.apply .bnr-box {
+  margin-top: 3.6rem;
+  text-align: center;
+}
+.apply .bnr-box .wrap-in {
+  width: 96rem;
+}
+/* -----------------------------------------
+ ヘッダー
+------------------------------------------- */
+header {
+  margin: 0 auto;
+  background: #fff;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.fixed #fixed-header {
+  box-shadow: 0 .2rem .4rem rgba(0,0,0,.2);
+}
+header .wrap {
+  min-height: 8.8rem;
+  padding-top: 2.1rem;
+  box-sizing: border-box;
+}
+#logo {
+  float: left;
+  width: 11rem;
+  margin-top: .4rem;
+}
+.hd-menu {
+  float: right;
+  margin-left: 1rem;
+}
+.hd-menu a {
+  display: block;
+  width: 3.4rem;
+  height: 3.4rem;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url(../img/btn_sp_menu.png) 0 0 no-repeat;
+  -webkit-background-size: 3.4rem auto;
+  background-size: 3.4rem auto;
+}
+.menuOpen .hd-menu a {
+  background-position: 0 bottom;
+}
+.hd-order {
+  float: right;
+  text-align: right;
+}
+header #logo img {
+  display: block;
+}
+header a.btn-red {
+  min-width: 0;
+  font-size: 1.6rem;
+}
+header a.btn-red span {
+  padding: .8em 2.6em .7em 2em;
+}
+.hd-tel-order {
+  float: right;
+}
+.hd-tel-order p {
+  display: inline-block;
+  vertical-align: middle;
+}
+.hd-tel-order p:first-child {
+  margin-top: .2rem;
+  margin-right: .7rem;
+  line-height: 1.3;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.hd-tel-order p:first-child span {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+.hd-tel-order .tel-number {
+  margin-top: .3rem;
+  margin-right: 2rem;
+}
+.hd-tel-order .tel-number a {
+  color: #E02E17;
+  line-height: 1;
+  font-size: 4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.hd-tel-order .tel-balloon {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #E02E17;
+  padding: .3rem .3rem .2em;
+  line-height: 1.2;
+  border: .1rem solid #E02E17;
+  border-radius: .4rem;
+  margin-right: .5rem;
+  position: relative;
+  top: -.2em;
+}
+
+
+/* -----------------------------------------
+ メインビジュアル
+------------------------------------------- */
+#main {
+  padding-bottom: 3.6rem;
+  margin-top: 8.8rem;
+}
+#main h1 {
+  position: relative;
+  text-align: center;
+}
+#main p {
+  padding: 1.5rem;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #38A6A6;
+}
+/* -----------------------------------------
+ もっとおトクに
+------------------------------------------- */
+#otoku {
+  padding-top: 2rem;
+  padding-bottom: 2.4rem;
+  background-color: #F5F1DA;
+}
+#otoku .wrap-in {
+  width: 90rem;
+}
+#otoku .ttl {
+  margin-bottom: 2rem;
+  padding: 0;
+  text-align: center;
+  background-color: transparent;
+}
+.otoku-info {
+  margin-bottom: 2.4rem;
+}
+.otoku-info .left-side {
+  float: left;
+  width: 41.2rem;
+}
+.otoku-info .right-side {
+  float: right;
+  width: 44.7rem;
+}
+#otoku + .apply {
+  margin-bottom: 6rem;
+}
+
+/* -----------------------------------------
+ セレクトプラン月額料金
+------------------------------------------- */
+.plan-table {
+  table-layout: fixed;
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto 2rem;
+  font-weight: bold;
+}
+.plan-table th {
+  background-color: #38A6A6;
+  color: #fff;
+  vertical-align: middle;
+  padding: .6em .2em;
+  border: 1px solid #bbb;
+  line-height: 1.2;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.plan-table th strong {
+  display: inline-block;
+  margin-bottom: .3rem;
+}
+.plan-table th span {
+  font-size: 1.4rem;
+  line-height: 1.1;
+  background-color: #fff;
+  padding: .2em;
+  letter-spacing: -.1rem;
+  display: inline-block;
+  width: 80%;
+}
+.plan-table th span.type-a {
+  color: #F26C00;
+}
+.plan-table th span.type-d {
+  color: #CC0033;
+}
+.plan-table th span.half {
+  width: 38%;
+  margin-right: .5rem;
+}
+.plan-table th span:last-of-type {
+  margin-top: .3rem;
+}
+.plan-table td {
+  vertical-align: middle;
+  padding: .5em .2em;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+  background: #fff;
+  line-height: 1.8;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.plan-table td.l-gray {
+  background-color: #eee;
+  line-height: 1.2;
+  font-size: 1.6rem;
+}
+.plan-table td > div {
+  position: relative;
+  display: inline-block;
+}
+.popular {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -4.4rem;
+  bottom: 0;
+  margin: auto;
+  width: 4rem;
+  height: 3.2rem;
+  background-color: #E02E17;
+  border-radius: 50%;
+  vertical-align: middle;
+  color: #fff;
+  line-height: 3.2rem;
+  font-size: 1.4rem;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+/* -----------------------------------------
+ シェアSIM料金
+------------------------------------------- */
+.sim-heading {
+  margin-bottom: 2rem;
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+.sim-heading span {
+  font-size: 1.6rem;
+}
+table.sim-type {
+  width: 100%;
+  margin-bottom: 1.6rem;
+  border-collapse: collapse;
+}
+table.sim-type th {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  color: #fff;
+  line-height: 1.5;
+  font-size: 1.8rem;
+  text-align: center;
+  background-color: #38A6A6;
+}
+table.sim-type td {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  line-height: 1.5;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+table.sim-type td strong {
+  color: #E02E17;
+  font-size: 2.2rem;
+}
+.sim-type + .notes {
+  margin-bottom: 2.4rem;
+}
+.ex-calc {
+  margin-bottom: 2.4rem;
+  padding: 2.4rem 0;
+  background-color: #F5F1DA;
+}
+.ex-calc .sim-heading + p {
+  margin-bottom: 1.6rem;
+  font-weight: bold;
+}
+.example {
+  margin-bottom: 1.6rem;
+}
+
+/* -----------------------------------------
+ 開通までの流れ
+------------------------------------------- */
+.merit {
+  margin-bottom: 3.6rem;
+  padding: 3rem 2rem;
+  line-height: 1.3;
+  color: #E02E17;
+  font-weight: bold;
+  font-size: 2.1rem;
+  text-align: center;
+  background-color: #F5F1DA;
+}
+.flow-nav {
+  margin-bottom: 2.4rem;
+}
+.flow-nav li {
+  float: left;
+  width: 42.8rem;
+}
+.flow-nav li:first-child {
+  margin-right: 2.4rem;
+}
+.flow-nav li a {
+  display: block;
+  position: relative;
+  padding: 1rem;
+  border: .1rem solid #38A6A6;
+  border-radius: .6rem;
+  color: #333;
+  line-height: 1.3;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  text-decoration: none;
+}
+.flow-nav li a::before {
+  content: '';
+  width: .7em;
+  height: .7em;
+  border: 0px;
+  border-bottom: solid .1rem #38A6A6;
+  border-right: solid .1rem #38A6A6;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  bottom: .3rem;
+  margin: auto;
+  right: .8em;
+}
+.flow-nav li a span {
+  font-size: 1.4rem;
+}
+.flow-box {
+  margin-bottom: 2.4rem;
+}
+.flow-heading {
+  background-color: #38A6A6;
+  color: #fff;
+  padding: .8rem 0;
+  line-height: 1.2;
+  text-align: center;
+  position: relative;
+  font-size: 2.1rem;
+}
+.flow-heading span {
+  font-size: 1.4rem;
+}
+.flow-heading.lh-l {
+  line-height: 2.2;
+}
+.flow-box .inner {
+  border: .1rem solid #ccc;
+  border-top: none;
+  padding: 2rem 3.6rem 3.6rem;
+  text-align: center;
+}
+.step-img {
+  margin-bottom: 3rem;
+}
+.flow-box .inner h4 {
+  position: relative;
+  margin-bottom: 2.6rem;
+  font-weight: bold;
+  font-size: 2.6rem;
+}
+.flow-box .inner h4 span {
+  display: inline-block;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 3.2rem;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 2.2rem;
+  background-color: #38A6A6;
+}
+.flow-box .inner .comment {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+.flow-box .inner .btn {
+  margin-bottom: 3rem;
+}
+.flow-box hr {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* -----------------------------------------
+ FAQ
+------------------------------------------- */
+.q-box {
+  border-radius: .5rem;
+  border: .1rem solid #ccc;
+  margin-bottom: 1rem;
+  background-color: #fff;
+}
+.q-box:last-of-type {
+  margin-bottom: 3.6rem;
+}
+a.question {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  padding: 1.8rem 6rem 1.8rem 8rem;
+  line-height: 1.2;
+  font-size: 1.8rem;
+}
+.locked a.question {
+  cursor: default;
+}
+a.question::before {
+  content: "";
+  width: 3.8rem;
+  height: 3.8rem;
+  position: absolute;
+  left: 2.3rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: url(../img/icon_q.png) 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+a.question::after {
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  right: 2.4rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: url(../img/icon_faq_toggle.png) 0 0 no-repeat;
+  -webkit-background-size: 2.4rem auto;
+  background-size: 2.4rem auto;
+}
+a.question.open::after {
+  background-position: 0 bottom;
+}
+.q-box.locked a.question::after {
+  display: none;
+}
+.answer {
+  display: none;
+  padding: 0 6rem 2.4rem 8rem;
+  line-height: 1.3;
+  font-size: 1.4rem;
+}
+.q-box.locked .answer {
+  display: block;
+  padding: 0 3.6rem 2.4rem;
+}
+.yellow-box {
+  padding: 2.4rem;
+  background-color: #F5F1DA;
+}
+.yellow-box::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.yellow-box img {
+  float: left;
+  width: 24.6rem;
+}
+.yellow-box .detail-side {
+  float: right;
+  width: 48.8rem;
+}
+.yellow-box .detail-side .heading {
+  margin-bottom: 2.4rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.device-txt {
+  margin-bottom: .5em;
+  letter-spacing: .6rem;
+}
+/* -----------------------------------------
+ ページトップ
+------------------------------------------- */
+#pagetop a {
+  position: fixed;
+  right: 0;
+  bottom: 2.5rem;
+  width: 4rem;
+  height: 4rem;
+  -webkit-border-radius: .5rem 0 0 .5rem;
+  border-radius: .5rem 0 0 .5rem;
+  color: #fff;
+  text-align: center;
+  background-color: #ccc;
+  cursor: pointer;
+  z-index: 999;
+}
+#pagetop a:before {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  border: 0px;
+  border-top: solid .3rem #fff;
+  border-right: solid .3rem #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: .6rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* -----------------------------------------
+ フッター
+------------------------------------------- */
+footer {
+  border-top: .1rem solid #ccc;
+  font-size: 1.2rem;
+}
+#copyright {
+  text-align: center;
+  padding: 3rem 0;
+}
+.foot-bnr h2 {
+  margin-bottom: 2rem;
+}
+
+
+/* -----------------------------------------
+ SPスタイル
+------------------------------------------- */
+@media screen and (max-width: 959px) {
+html {
+  font-size: 110%;
+}
+a:hover {
+  opacity: 1;
+}
+a.arrow {
+  padding-left: 1.2em;
+}
+a.arrow::before {
+  width: .4em;
+  height: .4em;
+  top: .4em;
+  bottom: auto;
+}
+.arrow-box {
+  padding: .4rem 0;
+}
+.wrap {
+  width: auto;
+  margin: 0 auto;
+}
+.wrap-in {
+  width: auto;
+  margin: 0 1.6rem;
+}
+section {
+  padding-bottom: 4rem;
+}
+.ttl {
+  margin-bottom: 2.4rem;
+  padding: 2rem 0;
+  font-size: 2.1rem;
+}
+.ttl [class^="icon-"], .ttl[class*=" icon-"] {
+  padding-top: 9.4rem;
+  padding-left: 0;
+}
+.ttl [class^="icon-"]::before, .ttl[class*=" icon-"]::before {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: auto;
+  width: 8rem;
+  height: 8rem;
+}
+.ttl [class^="icon-"]::after, .ttl[class*=" icon-"]::after {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: auto;
+  width: 8rem;
+  height: 8rem;
+  -webkit-background-size: 8rem auto;
+  background-size: 8rem auto;
+}
+.ttl .icon-plan::after {
+  background-position: 0 0;
+}
+.ttl .icon-sim::after {
+  background-position: 0 -8rem;
+}
+.ttl .icon-flow::after {
+  background-position: 0 -16rem;
+}
+.ttl .icon-faq::after {
+  background-position: 0 -24rem;
+}
+.ttl .fs-s {
+  font-size: 1.6rem;
+}
+.pc-only {
+  display: none;
+}
+.sp-only {
+  display: block;
+}
+.notes-ttl {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.top-notes {
+  font-size: 1.2rem;
+}
+.copy {
+  margin-bottom: 2.4rem;
+  text-align: left;
+}
+a.btn-red {
+  min-width: 0;
+  font-size: 1.8rem;
+}
+a.btn-red span {
+  padding: .6em 1.6em .6em 1em;
+}
+a.btn-red span::after {
+  width: .6em;
+  height: .6em;
+  right: 1.5rem;
+}
+  
+/* -----------------------------------------
+ 申し込み
+------------------------------------------- */
+.apply {
+  margin-top: 1.8rem;
+}
+.apply-box {
+  padding: 0;
+}
+.apply-box > div {
+  float: none;
+  width: 100%;
+  min-height: 0;
+  padding: 1.6rem;
+}
+.apply-box > div:first-child {
+  border-right: none;
+  border-bottom: .1rem solid #ccc;
+}
+.apply a.btn-red {
+  min-width: 0;
+}
+.apply h3 {
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+}
+.apply .tel-apply p {
+  line-height: 1;
+}
+.apply .tel-balloon {
+  font-size: 1rem;
+}
+.apply .tel-number {
+  position: relative;
+  top: -.2em;
+  margin-bottom: .8rem;
+  text-align: center;
+}
+.apply .tel-number a {
+  font-size: 3.2rem;
+}
+.apply .tel-time {
+  font-size: 1.2rem;
+}
+.apply .bnr-box {
+  margin-top: 2.4rem;
+}
+.apply .bnr-box .wrap-in {
+  width: auto;
+}
+/* -----------------------------------------
+ ヘッダー
+------------------------------------------- */
+header {
+  margin: 0 auto;
+  background: #fff;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+header .wrap {
+  min-height: 0;
+  padding: .6rem 1rem .6rem;
+}
+#logo {
+  width: 8.9rem;
+  margin-top: .3rem;
+}
+.hd-order {
+  float: right;
+  text-align: right;
+}
+header #logo img {
+  display: block;
+}
+header a.btn-red {
+  min-width: 0;
+  line-height: 1;
+  font-size: 1.4rem;
+}
+header a.btn-red span {
+  padding: .4em 2.6em .3em 2em;
+}
+.hd-tel-order {
+  display: none;
+}
+
+
+
+/* -----------------------------------------
+ メインビジュアル
+------------------------------------------- */
+#main {
+  padding-bottom: 0;
+  margin-top: 5rem;
+}
+#main p {
+  padding: 1rem;
+  line-height: 1.4;
+  font-size: 1.4rem;
+  text-align: left;
+}
+#main img {
+  width: 100%;
+  max-width: none;
+}
+#main p br {
+  display: none;
+}
+/* -----------------------------------------
+ もっとおトクに
+------------------------------------------- */
+#otoku {
+  padding-top: 1.6rem;
+  padding-bottom: 2.4rem;
+}
+#otoku .wrap-in {
+  width: auto;
+}
+#otoku .ttl {
+  margin-bottom: 2rem;
+  padding: 0;
+  text-align: center;
+}
+#otoku .ttl img {
+  width: 90%;
+}
+.otoku-info {
+  margin-bottom: 1.6rem;
+}
+.otoku-info .left-side {
+  float: none;
+  width: 100%;
+  text-align: center;
+}
+.otoku-info .right-side {
+  float: none;
+  width: 100%;
+  text-align: center;
+}
+#otoku + .apply {
+  margin-bottom: 4rem;
+}
+
+/* -----------------------------------------
+ セレクトプラン月額料金
+------------------------------------------- */
+.plan-table {
+  margin: 0 auto 1rem;
+}
+.plan-table th {
+  padding: .6em .2em;
+  font-size: 1.1rem;
+}
+.plan-table th span {
+  font-size: 1rem;
+  width: 80%;
+}
+.plan-table th span.half {
+  width: 80%;
+  margin-right: 0;
+}
+.plan-table td {
+  padding: .5em .2em;
+  line-height: 1.8;
+  font-size: 1.4rem;
+}
+.plan-table td.l-gray {
+  font-size: 1.2rem;
+}
+.popular {
+  left: -3.2rem;
+  width: 3rem;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  font-size: 1.1rem;
+}
+  
+
+/* -----------------------------------------
+ シェアSIM料金
+------------------------------------------- */
+.sim-heading {
+  margin-bottom: 1.6rem;
+  font-size: 1.8rem;
+}
+.sim-heading span {
+  font-size: 1.4rem;
+}
+table.sim-type {
+  table-layout: fixed;
+}
+table.sim-type th {
+  padding: .6rem 0;
+  line-height: 1.3;
+  font-size: 1.4rem;
+}
+table.sim-type td {
+  padding: 1.2rem 0;
+  font-size: 1.4rem;
+}
+table.sim-type td strong {
+  font-size: 2rem;
+}
+.sim-type + .notes {
+  margin-bottom: 2.4rem;
+}
+.ex-calc {
+  margin-bottom: 2.4rem;
+  padding: 2.4rem 0;
+}
+.ex-calc .sim-heading + p {
+  margin-bottom: 1.6rem;
+  font-size: 1.4rem;
+}
+.example {
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+.example img {
+  width: 70%;
+}
+
+/* -----------------------------------------
+ 開通までの流れ
+------------------------------------------- */
+.merit {
+  margin-bottom: 2.4rem;
+  padding: 1.6rem 1rem;
+  font-size: 1.8rem;
+}
+.flow-nav {
+  margin-bottom: 1.6rem;
+}
+.flow-nav li {
+  float: none;
+  width: 100%;
+}
+.flow-nav li:first-child {
+  margin-right: 0;
+  margin-bottom: .8rem;
+}
+.flow-nav li a {
+  padding: .8rem;
+  line-height: 1.1;
+  font-size: 1.5rem;
+}
+.flow-nav li a span {
+  font-size: 1.1rem;
+}
+.flow-box {
+  margin-bottom: 1.6rem;
+}
+.flow-heading {
+  padding: .8rem 0;
+  font-size: 1.8rem;
+}
+.flow-heading span {
+  font-size: 1.2rem;
+}
+.flow-heading.lh-l {
+  line-height: 1.5;
+}
+.flow-box .inner {
+  padding: 1rem 1.6rem 1.6rem;
+  text-align: center;
+}
+.step-img {
+  margin-bottom: 1.6rem;
+}
+.flow-box .inner h4 {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 4rem;
+  line-height: 1.2;
+  font-size: 2rem;
+  text-align: left;
+}
+.flow-box .inner h4 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+.flow-box .inner p {
+  text-align: left;
+}
+.flow-box .inner .comment {
+  margin-bottom: 1.6rem;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.flow-box .inner .btn {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.flow-box .inner .btn-red {
+  display: block;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+.flow-box hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* -----------------------------------------
+ FAQ
+------------------------------------------- */
+.q-box {
+  margin-bottom: .8rem;
+}
+.q-box:last-of-type {
+  margin-bottom: 3.6rem;
+}
+a.question {
+  padding: 1rem 4.6rem;
+  font-size: 1.6rem;
+}
+a.question::before {
+  width: 2.8rem;
+  height: 2.8rem;
+  left: .8rem;
+}
+a.question::after {
+  width: 1.6rem;
+  height: 1.6rem;
+  right: 1rem;
+  -webkit-background-size: 1.6rem auto;
+  background-size: 1.6rem auto;
+}
+.answer {
+  padding: 0 1.6rem 1.6rem;
+}
+.q-box.locked .answer {
+  padding: 0 1.6rem 1.6rem;
+}
+.yellow-box {
+  padding: 1.6rem;
+}
+.yellow-box img {
+  float: none;
+  display: block;
+  width: 20rem;
+  margin: 0 auto 1rem;
+}
+.yellow-box .detail-side {
+  float: none;
+  width: 100%;
+}
+.yellow-box .detail-side .heading {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+/* end */}
+
+
+/* -----------------------------------------
+ レスポンシブ設定
+------------------------------------------- */
+@media screen and (max-width: 768px) {
+html {
+  font-size: 90%;
+}
+}
+
+@media screen and (max-width: 600px) {
+html {
+  font-size: 75%;
+}
+header a.btn-red span {
+  font-size: 1.3rem;
+}
+}
+
+@media screen and (max-width: 430px) {
+html {
+  font-size: 62.5%;
+}
+}
+
+@media screen and (max-width: 359px) {
+html {
+  font-size: 50%;
+}
+header a.btn-red span {
+  font-size: 1.6rem;
+}
+}
+
